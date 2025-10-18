@@ -1,5 +1,8 @@
-
-/guess.cpp
-/guess.exe
-/main.cpp
-/main.exe
+/board.txt
+/CMakeLists/txt
+/README.md
+/ThreeDBingo.cpp
+/ThreeDBingo.exe
+/ThreeDBingoBoard.hpp
+/settings.json
+/tasks.json 
