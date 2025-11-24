@@ -12,25 +12,64 @@ class Vector
 {
 public:
 	// default constructor (initialize all components to 0)
-	Vector();
+	Vector() : numcomponents(N) {  //initialize a new N dimensional vector with all coordinates = 0
+		for (int i = 0; i < (N-1); ++i){
+			components[i] = T; //not sure if this is the right implementation for 0 of type T
+		}
+	}
 
 	// copy constructor
-	Vector(const Vector<T,N>& other);
+	Vector(const Vector<T,N>& other){ //create a new vector as a copy of an existing one
+		numcomponents = other.numcomponents
+		for (int i = 0; i < (N-1); ++i){
+			components[i] = other.components[i];
+		}
+	}
 
 	// dot product with other Vector v
-	T dot( Vector<T,N> &v);
+	T dot( Vector<T,N> &v){ //compute the dot product beween this vector and another vector of the same dimension
+		T acc{};
+		for (int = 0; i < (N-1); ++i){
+			int product = components[i] * v[i];
+			acc + product;
+		}
+		return acc;
+	}
 
 	// magnitude of this Vector
-	double magnitude();
+	double magnitude(){ //Return the Euclidean length of this vector 
+		double acc = 0.0;
+		for (int = 0; i < (N-1); ++i){
+			double dubcomp = static_cast<double>(components[i]);
+			double square = dubcomp * dubcomp;
+			acc + square;
+		}
+		double mag = sqrt(acc);
+		return mag;
+	}
 
 	// overloaded indexing operator (initial index is 0)
-	T& operator[](int index);
+	T& operator[](int index){ //Provide read and write access to a component by index
+		return components[index];
+	}
 
 	// Overloaded addition operator
-	Vector<T,N>& operator+( const Vector<T,N>& v2);
+	Vector<T,N>& operator+( const Vector<T,N>& v2){ //produce a new vector equal to the elemntwise sum of this vector and v2
+		Vector<T,N> vsum;
+		for (int = 0; i < (N-1); ++i){
+			vsum.components[i] = this->components[i] + v2.components[i];
+		}
+		return vsum;
+	}
 
 	// Overloaded subtraction operator
-	Vector<T,N>& operator-( const Vector<T,N>& v2);
+	Vector<T,N>& operator-( const Vector<T,N>& v2){ //produce a new vector equal to the elementwise difference of this vector and v2
+		Vector<T,N> vdiff;
+		for (int = 0; i < (N-1); ++i){
+			vdiff.components[i] = this->components[i] - v2.components[i];
+		}
+		return vdiff;
+	}
 
 	// Overloaded output stream operator
 	template <typename U, std::size_t M>
