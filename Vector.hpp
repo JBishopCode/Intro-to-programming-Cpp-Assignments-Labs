@@ -19,7 +19,7 @@ public:
 	}
 
 	// copy constructor
-	Vector(const Vector<T,N>& other) : numcomponents(N) { //create a new vector as a copy of an existing one
+	Vector(const Vector<T,N>& other){ //create a new vector as a copy of an existing one
 		numcomponents = other.numcomponents;
 		for (int i = 0; i < N; ++i){
 			components[i] = other.components[i];
@@ -39,7 +39,7 @@ public:
 	// magnitude of this Vector
 	double magnitude(){ //Return the Euclidean length of this vector 
 		double acc = 0.0;
-		for (int = 0; i < N; ++i){
+		for (int i = 0; i < N; ++i){
 			double dubcomp = static_cast<double>(components[i]);
 			double square = dubcomp * dubcomp;
 			acc += square;
@@ -54,18 +54,18 @@ public:
 	}
 
 	// Overloaded addition operator
-	Vector<T,N> operator+( const Vector<T,N>& v2){ //produce a new vector equal to the elemntwise sum of this vector and v2
+	Vector<T,N> operator+( const Vector<T,N> v2){ //produce a new vector equal to the elemntwise sum of this vector and v2
 		Vector<T,N> vsum;
-		for (int = 0; i < N; ++i){
+		for (int i = 0; i < N; ++i){
 			vsum.components[i] = this->components[i] + v2.components[i];
 		}
 		return vsum;
 	}
 
 	// Overloaded subtraction operator
-	Vector<T,N> operator-( const Vector<T,N>& v2){ //produce a new vector equal to the elementwise difference of this vector and v2
+	Vector<T,N> operator-( const Vector<T,N> v2){ //produce a new vector equal to the elementwise difference of this vector and v2
 		Vector<T,N> vdiff;
-		for (int = 0; i < N; ++i){
+		for (int i = 0; i < N; ++i){
 			vdiff.components[i] = this->components[i] - v2.components[i];
 		}
 		return vdiff;
