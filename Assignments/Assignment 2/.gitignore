@@ -1,5 +1,14 @@
+<<<<<<< HEAD:Assignments/Assignment 2/.gitignore
 
 /guess.cpp
 /guess.exe
 /main.cpp
 /main.exe
+=======
+test.exe
+test.cpp
+testing.cpp
+testing.exe
+ECE3400_Assignment5.pdf
+.vscode
+>>>>>>> main:.gitignore
