@@ -1,4 +1,4 @@
-#Intro to Programming C++ Assignments and Labs
+# Intro to Programming C++ Assignments and Labs
 
 This repository holds all of my C++ course work.
 Each assignment/lab sits in its own folder.
