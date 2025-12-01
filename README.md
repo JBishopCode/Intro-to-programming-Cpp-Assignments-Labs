@@ -5,10 +5,7 @@ This repository holds all of my C++ course work.
 Each assignment/lab sits in its own folder.
 
 Overall, there is 6 Assignments and 4 Labs.
-
 Some Assignments/Labs are missing due to being done on another software (QT) so I couldnt import them onto here.
-
-The main branch stores every assignment and lab in one place.
 
 **Structure**
 
@@ -16,6 +13,7 @@ Assignments
 Labs
 
 Each folder includes code, notes, and any build files needed for that task.
+The main branch stores every assignment and lab in one place.
 
 **How to use this repo**
 
